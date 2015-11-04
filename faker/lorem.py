@@ -10,7 +10,7 @@ def words(num=False):
 def sentence(word_count=False):
     if not word_count:
         word_count = 3
-    return  " ".join(words(word_count + random.randint(0,7))).title()+"."
+    return  " ".join(words(word_count + random.randint(0,7))).capitalize()+"."
 
 
 def sentences(sentence_count=False):

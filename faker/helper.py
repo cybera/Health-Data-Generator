@@ -1,5 +1,7 @@
 import re
 import random
+
+
 def slugify(istring):
     return re.sub(r'\W+','.',istring.lower())
 
@@ -11,7 +13,7 @@ def replace_symbol_with_number(istring, symbol=False):
     ostring = ''
     for i in range(len(istring)):
         if istring[i] == symbol:
-            ostring += str(random.randint(0,10))
+            ostring += str(random.randint(0,9))
         else:
             ostring += istring[i]
     return ostring
