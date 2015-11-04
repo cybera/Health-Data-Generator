@@ -1,12 +1,27 @@
 #!/usr/bin/env python
 
-from distutils.core import setup
+try:
+    from setuptools import setup
+except ImportError:
+    from distutils.core import setup
 
-setup(name='Faker.py',
-      version='1.0',
-      description='Fake data generator for python',
-      author='Hrishikesh Huilgolkar',
-      author_email='hrishikesh911@gmail.com',
-      url='https://github.com/hrishikeshio/Faker.py',
-      packages=['faker'],
-     )
+def readme():
+    with open('README.md') as f:
+        return f.read()
+
+config = {
+    'name': 'Faker',
+    'description': 'Fake data generator for python',
+    'author': 'Hrishikesh Huilgolkar, Barton Satchwill',
+    'author_email': 'hrishikesh911@gmail.com, barton.satchwill@gmail.com',
+    'url': '',
+    'download_url': '',
+    'dependency_links':[''],
+    'version': '0.0.1',
+    'install_requires': [''],
+    'tests_require': ['nose'],
+    'packages': ['faker'],
+    'scripts': ['']
+}
+
+setup(**config)

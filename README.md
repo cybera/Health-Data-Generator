@@ -1,4 +1,4 @@
-Faker.py - Generate any amount of fake data for python
+Faker - Generate any amount of fake data for python
 ========
 
 Usage
@@ -18,16 +18,140 @@ Or clone the git repo and install from source
       $ sudo python setup.py install
 
 ## API
-<ul><li>Name<ul><li>first_name</li><li>last_name</li><li>find_name</li></ul></li><li>Address<ul><li>zip_code</li><li>zip_code_format</li><li>city</li><li>street_name</li><li>street_address</li><li>secondary_address</li><li>br_state</li><li>uk_county</li><li>uk_country</li><li>us_state</li></ul></li><li>Phone_number<ul><li>phone_number</li><li>phone_number_format</li></ul></li><li>Internet<ul><li>email</li><li>user_name</li><li>domain_name</li><li>domain_word</li><li>ip</li></ul></li><li>Company<ul><li>suffixes</li><li>company_name</li><li>company_suffix</li><li>catch_phrase</li><li>bs</li></ul></li><li>Lorem<ul><li>words</li><li>sentence</li><li>sentences</li><li>paragraph</li><li>paragraphs</li></ul></li><li>Helper<ul><li>randomize</li><li>slugify</li><li>replace_symbol_with_number</li><li>shuffle</li></ul><li>Cards<ul><li>create_card</li><li>user_card</li></ul></li><li>random<ul><li>number</li><li>list_element</li><li>city_prefix</li><li>city_suffix</li><li>street_suffix</li><li>br_state</li><li>br_state_abbr</li><li>us_state</li><li>us_state_abbr</li><li>uk_county</li><li>uk_country</li><li>first_name</li><li>last_name</li><li>name_prefix</li><li>name_suffix</li><li>catch_phrase_adjective</li><li>catch_phrase_descriptor</li><li>catch_phrase_noun</li><li>bs_adjective</li><li>bs_buzz</li><li>bs_noun</li><li>phone_formats</li><li>domain_suffix</li></ul></li><li>definitions<ul><li>first_name</li><li>last_name</li><li>name_prefix</li><li>name_suffix</li><li>br_state</li><li>br_state_abbr</li><li>us_state</li><li>us_state_abbr</li><li>city_prefix</li><li>city_suffix</li><li>street_suffix</li><li>uk_county</li><li>uk_country</li><li>catch_phrase_adjective</li><li>catch_phrase_descriptor</li><li>catch_phrase_noun</li><li>bs_adjective</li><li>bs_buzz</li><li>bs_noun</li><li>domain_suffix</li><li>lorem</li><li>phone_formats</li></ul></li></ul>
+* lorem
+  * words
+  * sentence
+  * sentences
+  * paragraph
+  * paragraphs
+* phone
+  * phone_number
+  * phone_number_format
+* internet
+  * email
+  * user_name
+  * domain_name
+  * domain_word
+  * ip
+* name
+  * first_name
+  * last_name
+  * find_name
+* frandom
+  * list_element
+  * ca_city
+  * ca_province_abbr
+  * ca_postal_code
+  * gender
+  * ICD_code
+  * education
+  * patient_status
+  * city_prefix
+  * city_suffix
+  * street_suffix
+  * br_state
+  * br_state_abbr
+  * us_state
+  * us_state_abbr
+  * uk_county
+  * uk_country
+  * first_name
+  * last_name
+  * name_prefix
+  * name_suffix
+  * catch_phrase_adjective
+  * catch_phrase_descriptor
+  * catch_phrase_noun
+  * bs_adjective
+  * bs_buzz
+  * bs_noun
+  * phone_formats
+  * domain_suffix
+  * address
+  * zip_code
+  * zip_code_format
+  * city
+  * ca_city
+  * ca_postal_code
+  * ca_province_abbr
+  * street_name
+  * street_address
+  * secondary_address
+  * br_state
+  * uk_county
+  * uk_country
+  * us_state
+* cards
+  * create_card
+  * user_card
+* company
+  * suffixes
+  * company_name
+  * company_suffix
+  * catch_phrase
+  * bs
+* helper
+  * slugify
+  * replace_symbol_with_number
+  * shuffle
+  * clinical
+  * ICD
+  * ICD_code
+  * ICD_code_descr
+  * blood_pressure
+  * systolic
+  * diastolic
+  * glycohemoglobin
+  * patient_status
+* definitions
+  * ca_province
+  * ca_province_abbr
+  * ca_city
+  * ca_postal_codes
+  * gender
+  * ICD_codes
+  * education
+  * patient_status
+  * first_name
+  * last_name
+  * name_prefix
+  * name_suffix
+  * br_state
+  * br_state_abbr
+  * us_state
+  * us_state_abbr
+  * city_prefix
+  * city_suffix
+  * street_suffix
+  * uk_county
+  * uk_country
+  * catch_phrase_adjective
+  * catch_phrase_descriptor
+  * catch_phrase_noun
+  * bs_adjective
+  * bs_buzz
+  * bs_noun
+  * domain_suffix
+  * lorem
+  * phone_formats
+* demographics
+  * ID
+  * gender
+  * education
+  * education_code
+  * education_descr
+  * birthdate
 
-## Author
+## Authors
 #### Hrishikesh Huilgolkar
 Follow on twitter http://twitter.com/hrishikeshio <br/>
 My Blog http://blogicious.com <br/>
 Ported from javascript library Faker.js by Matthew Bergman & Marak Squires http://github.com/marak/Faker.js/
-<br/>
 Copyright (c) 2013 Hrishikesh Huilgolkar http://github.com/hrishikeshio/Faker.py/
-<br/>
+#### Barton Satchwill
+Added extenstions for Canadian locales and medical data
+
+
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
 "Software"), to deal in the Software without restriction, including
@@ -35,10 +159,12 @@ without limitation the rights to use, copy, modify, merge, publish,
 distribute, sublicense, and/or sell copies of the Software, and to
 permit persons to whom the Software is furnished to do so, subject to
 the following conditions:
-<br/>
+
+
 The above copyright notice and this permission notice shall be
 included in all copies or substantial portions of the Software.
-<br/>
+
+
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
 EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
 MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
