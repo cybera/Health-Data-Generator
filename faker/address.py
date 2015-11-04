@@ -1,6 +1,6 @@
 from faker import frandom
 from faker import helper
-import random
+import random, string
 
 def zip_code():
 	return helper.replace_symbol_with_number(frandom.list_element(["#####", '#####-####']))
@@ -18,6 +18,7 @@ def city():
 		return frandom.first_name() + frandom.city_suffix()
 	else:
 		return frandom.last_name() + frandom.city_suffix()
+	return frandom.city() 
 
 def street_name():
 	r = random.randint(0,2)
@@ -60,4 +61,13 @@ def us_state(use_abbr=False):
 		return frandom.us_state_abbr()
 	else:
 		return frandom.us_state()
+
+def ca_city():
+	return frandom.ca_city() 
+
+def ca_postal_code(city):
+	return frandom.ca_postal_code(city) + " " + ''.join(random.choice(string.ascii_uppercase + string.digits + string.ascii_uppercase) for _ in range(3))
+
+def ca_province_abbr(province):
+	return frandom.ca_province_abbr(province)
     

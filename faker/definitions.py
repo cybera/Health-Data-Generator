@@ -19,66 +19,10 @@ def name_suffix():
     
 
 def br_state():
-	return [
-		'Acre',
-		'Alagoas',
-		'Amapá',
-		'Amazonas',
-		'Bahia',
-		'Ceará',
-		'Distrito Federal',
-		'Espírito Santo',
-		'Goiás',
-		'Maranhão',
-		'Mato Grosso',
-		'Mato Grosso do Sul',
-		'Minas Gerais',
-		'Paraná',
-		'Paraíba',
-		'Pará',
-		'Pernambuco',
-		'Piauí',
-		'Rio de Janeiro',
-		'Rio Grande do Norte',
-		'Rio Grande do Sul',
-		'Rondônia',
-		'Roraima',
-		'Santa Catarina',
-		'Sergipe',
-		'São Paulo',
-		'Tocantins'
-	]
+	return ['Acre', 'Alagoas', 'Amapá', 'Amazonas', 'Bahia', 'Ceará', 'Distrito Federal', 'Espírito Santo', 'Goiás', 'Maranhão', 'Mato Grosso', 'Mato Grosso do Sul', 'Minas Gerais', 'Paraná', 'Paraíba', 'Pará', 'Pernambuco', 'Piauí', 'Rio de Janeiro', 'Rio Grande do Norte', 'Rio Grande do Sul', 'Rondônia', 'Roraima', 'Santa Catarina', 'Sergipe', 'São Paulo', 'Tocantins']
 
 def br_state_abbr():
-	return [
-		'AC',
-		'AL',
-		'AP',
-		'AM',
-		'BA',
-		'CE',
-		'DF',
-		'ES',
-		'GO',
-		'MA',
-		'MT',
-		'MS',
-		'MG',
-		'PR',
-		'PB',
-		'PA',
-		'PE',
-		'PI',
-		'RJ',
-		'RN',
-		'RS',
-		'RO',
-		'RR',
-		'SC',
-		'SE',
-		'SP',
-		'TO'
-	]
+	return ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PR', 'PB', 'PA', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SE', 'SP', 'TO']
 
 def us_state():
 	return ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming']
@@ -167,4 +111,18 @@ def phone_formats():
 		'1-###-###-#### x#####',
 		'###.###.#### x#####'
 	]
+
+def ca_province():
+	return ["British Columbia", "Alberta", "Saskatchewan", "Manitoba"]
+
+def ca_province_abbr(province):
+	dict = {"British Columbia": 'BC', "Alberta": 'AB', "Saskatchewan": 'SK', "Manitoba": 'MN'} 
+	return dict[province]
+
+def ca_city():
+	return ['Acheson', 'Alcomdale', 'Alder Flats', 'Alsike', 'Ardrossan', 'Beaumont', 'Bon Accord', 'Brazeau County', 'Breton', 'Buck Creek', 'Buck Lake', 'Calahoo', 'Calmar', 'Carnwood', 'Carvel', 'Cooking Lake', 'Cynthia', 'Devon', 'Drayton Valley', 'Duffield', 'Edmonton', 'Enoch', 'Entwistle', 'Fallis', 'Falun', 'Fort Saskatchewan', 'Gainford', 'Gibbons', 'Gwynne', 'Kapasiwin', 'Lancaster Park', 'Leduc', 'Leduc County', 'Legal', 'Lindale', 'Lodgepole', 'Ma-Me-O Beach', 'Millet', 'Morinville', 'Mulhurst Bay', 'Namao', 'New Sarepta', 'Nisku', 'Parkland County', 'Redwater', 'Riviere Qui Barre', 'Rocky Rapids', 'Rolly View', 'Seba Beach', 'Sherwood Park', 'Spring Lake', 'Spruce Grove', 'Stony Plain', 'Sturgeon County', 'Sunnybrook', 'Thorsby', 'Tomahawk', 'Wabamun', 'Warburg', 'Westerose', 'Wetaskiwin', 'Winfield']
+
+def ca_postal_codes(city):
+	dict = {'Acheson': ['T7X'], 'Alcomdale': ['T0G'], 'Alder Flats': ['T0C'], 'Alsike': ['T0C'], 'Ardrossan': ['T8E','T8G'], 'Beaumont': ['T4X'], 'Bon Accord': ['T0A'], 'Brazeau County': ['T7A'], 'Breton': ['T0C'], 'Buck Creek': ['T0C'], 'Buck Lake': ['T0C'], 'Calahoo': ['T0G'], 'Calmar': ['T0C'], 'Carnwood': ['T0C'], 'Carvel': ['T0E'], 'Cooking Lake': ['T8E'], 'Cynthia': ['T0E'], 'Devon': ['T9G'], 'Drayton Valley': ['T7A'], 'Duffield': ['T0E'], 'Edmonton': ['T5A', 'T5B', 'T5C', 'T5E', 'T5G'], 'Enoch': ['T7X'], 'Entwistle': ['T0E'], 'Fallis': ['T0E'], 'Falun': ['T0C'], 'Fort Saskatchewan': ['T8L'], 'Gainford': ['T0E'], 'Gibbons': ['T0A', 'T0G'], 'Gwynne': ['T0C'], 'Kapasiwin': ['T0E'], 'Lancaster Park': ['T0A'], 'Leduc': ['T9E'], 'Leduc County': ['T0B', 'T4X', 'T9G'], 'Legal': ['T0G'], 'Lindale': ['T0C'], 'Lodgepole': ['T0E'], 'Ma-Me-O Beach': ['T0C'], 'Millet': ['T0C'], 'Morinville': ['T8R'], 'Mulhurst Bay': ['T0C'], 'Namao': ['T0A'], 'New Sarepta': ['T0B'], 'Nisku': ['T9E'], 'Parkland County': ['T7Y', 'T7Z'], 'Redwater': ['T0A'], 'Riviere Qui Barre': ['T0G'], 'Rocky Rapids': ['T0E'], 'Rolly View': ['T0C', 'T4X'], 'Seba Beach': ['T0E'], 'Sherwood Park': ['T8A', 'T8B', 'T8C', 'T8E', 'T8G'], 'Spring Lake': ['T7Z'], 'Spruce Grove': ['T7X', 'T7Y'], 'St. Albert': ['T8N'], 'Stony Plain': ['T7Z'], 'Sturgeon County': ['T8L', 'T8N', 'T8R', 'T8T'], 'Sunnybrook': ['T0C'], 'Thorsby': ['T0C'], 'Tomahawk': ['T0E'], 'Wabamun': ['T0E'], 'Warburg': ['T0C'], 'Westerose': ['T0C'], 'Wetaskiwin': ['T9A'], 'Winfield': ['T0C']}	
+	return dict[city]
 

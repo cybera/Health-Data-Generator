@@ -66,3 +66,13 @@ def phone_formats():
     
 def domain_suffix():
 	return list_element(definitions.domain_suffix())
+
+def ca_city():
+	return list_element(definitions.ca_city())
+
+def ca_province_abbr(province):
+	return definitions.ca_province_abbr(province)
+
+def ca_postal_code(city):
+	return list_element(definitions.ca_postal_codes(city))
+
