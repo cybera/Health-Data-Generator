@@ -76,3 +76,14 @@ def ca_province_abbr(province):
 def ca_postal_code(city):
 	return list_element(definitions.ca_postal_codes(city))
 
+def gender():
+	return list_element(definitions.gender())
+
+def ICD_code():
+	return list_element(definitions.ICD_codes().keys())
+
+def education():
+	return list_element(definitions.education().keys())
+
+def patient_status():
+	return list_element(definitions.patient_status())
