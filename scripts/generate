@@ -1,0 +1,40 @@
+#! python
+
+import random, string, sys, collections
+from health_data_generator import health_data_generator as gen
+
+
+if __name__ == '__main__':
+  mode = 'test'
+  count = 1
+  print sys.argv
+
+  if len(sys.argv) == 3:
+    mode = sys.argv.pop()
+    count = int(sys.argv.pop())
+
+  if mode == 'test':
+    p = gen.generate_simple_patient()
+    gen.print_record(p)
+    for i in range (0, random.randint(0,9)):
+      r = gen.generate_simple_medical_record()
+      for k,v in r.iteritems():
+        p[k]=v
+      print "-------------"
+      gen.print_record(r)
+      exit()
+
+  i = 0
+  print "generating " + str(count) + " " + mode + " records"
+  while i < count:
+    p = gen.generate_patient(mode)
+    j = random.randint(1,9)
+    while i < count and j > 0:
+      r = gen.generate_medical_record(mode)
+      # append medical record to patient record
+      for k,v in r.iteritems():
+        p[k]=v
+      gen.write_record(p, '../fake_data_%s.csv' % mode)
+      i+=1
+      j-=1
+    print i

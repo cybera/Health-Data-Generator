@@ -1,27 +1,20 @@
-#!/usr/bin/env python
-
 try:
-    from setuptools import setup
+  from setuptools import setup, find_packages
 except ImportError:
-    from distutils.core import setup
+  from distutils.core import setup
 
-def readme():
-    with open('README.md') as f:
-        return f.read()
+setup(
+  name       = 'health_data_generator',
+  version      = '0.0.1',
+  description    = '',
+  author       = 'Barton Satchwill',
+  author_email   = 'barton.satchwill@cybera.ca',
+  url        = '',
+  download_url   = '',
+  install_requires = [],
+  dependency_links = [],
+  tests_require  = ['nose'],
+  packages     = find_packages(exclude=['docs', 'tests']),
+  scripts      = ['scripts/generate']
+)
 
-config = {
-    'name': 'Faker',
-    'description': 'Fake data generator for python',
-    'author': 'Hrishikesh Huilgolkar, Barton Satchwill',
-    'author_email': 'hrishikesh911@gmail.com, barton.satchwill@gmail.com',
-    'url': '',
-    'download_url': '',
-    'dependency_links':[''],
-    'version': '0.0.1',
-    'install_requires': [''],
-    'tests_require': ['nose'],
-    'packages': ['faker'],
-    'scripts': ['']
-}
-
-setup(**config)
