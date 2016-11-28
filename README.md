@@ -1,7 +1,7 @@
 Health Data Generator
 =======
 
-### Generate any amount of realistic medical data
+### Generate realistic medical records
 This tool will create files of convincingly realistic comma-separated medical records suitable for testing and system development.
 
 Installation
@@ -20,6 +20,9 @@ Usage
 To generate any number of health records, use the 'generate' command.  Either a 'simple' or a 'complex' record format can be created.
 ```
 generate <integer> <simple|complex>
+where:
+	'n' is the number of records to generate, and
+	'simple' or 'complex' are the type of record to generate
 ```
 
 To use this package in your own project, simply import the required packages:

@@ -5,27 +5,24 @@ from health_data_generator import health_data_generator as gen
 
 
 if __name__ == '__main__':
-  mode = 'test'
-  count = 1
+  mode = ''
+  count = 0
   print sys.argv
 
   if len(sys.argv) == 3:
     mode = sys.argv.pop()
     count = int(sys.argv.pop())
-
-  if mode == 'test':
-    p = gen.generate_simple_patient()
-    gen.print_record(p)
-    for i in range (0, random.randint(0,9)):
-      r = gen.generate_simple_medical_record()
-      for k,v in r.iteritems():
-        p[k]=v
-      print "-------------"
-      gen.print_record(r)
-      exit()
+  else:
+    print "\n\nusage:"
+    print "\tgenerate <n> <simple|complex>"
+    print "where:"
+    print "\t'n' is the number of records to generate, and"
+    print "\t'simple' or 'complex' are the type of record to generate\n"
+    exit()
 
   i = 0
   print "generating " + str(count) + " " + mode + " records"
+  filename = 'fake_data_%s.csv' % mode
   while i < count:
     p = gen.generate_patient(mode)
     j = random.randint(1,9)
@@ -34,7 +31,8 @@ if __name__ == '__main__':
       # append medical record to patient record
       for k,v in r.iteritems():
         p[k]=v
-      gen.write_record(p, '../fake_data_%s.csv' % mode)
+      gen.write_record(p, filename)
       i+=1
       j-=1
-    print i
+    print "%d records generated" % i
+  print "done.\n%s %s records written to %s" %(str(count), mode, filename)
