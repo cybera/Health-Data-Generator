@@ -1,6 +1,6 @@
-from faker import frandom
-from faker import helper
+import frandom, helper
 import random
+
 def first_name():
   """"""
   return frandom.first_name()

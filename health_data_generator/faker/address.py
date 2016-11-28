@@ -1,5 +1,4 @@
-from faker import frandom
-from faker import helper
+import frandom, helper
 import random, string
 
 def zip_code():

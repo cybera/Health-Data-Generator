@@ -1,7 +1,6 @@
-from faker import frandom
-from faker import helper
-from faker import definitions
+import frandom, helper, definitions
 import random
+
 def words(num=False):
   if not num:
     num = 3
